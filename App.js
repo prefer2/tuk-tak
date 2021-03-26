@@ -6,6 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from './component/Home'
 import MyCalendar from './component/MyCalendar'
 
+
 function HomeScreen() {
   return (
     <Home/>
@@ -15,7 +16,7 @@ function HomeScreen() {
 function SettingsScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
+    
     </View>
   );
 }

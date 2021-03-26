@@ -52,7 +52,7 @@ const Carousel = () => {
 
                     const translateY = scrollX.interpolate({
                         inputRange,
-                        outputRange: [100, 90, 100],
+                        outputRange: [60, 50, 60],
                         extrapolate: 'clamp',
                       });
 
