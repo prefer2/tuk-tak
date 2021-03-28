@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { StatusBar, FlatList, Image, Animated, Text, View, Dimensions, StyleSheet, TouchableOpacity } from 'react-native';
+
 const { width, height } = Dimensions.get('screen');
 
 const data = [
@@ -21,11 +22,11 @@ const fake_len = (width - imageW) /2
 
 const Carousel = () => {
     const scrollX = React.useRef(new Animated.Value(0)).current;
-   
     return (
         <View style={{ flex: 1, marginHorizontal: 20}}>
            
             <StatusBar hidden />
+            
             <Animated.FlatList
                 data={data}
                 keyExtractor={(_, index)=>index.toString()}
@@ -34,6 +35,7 @@ const Carousel = () => {
                 snapToInterval={imageW}
                 decelerationRate={0}
                 bounces={false}
+                showsHorizontalScrollIndicator={false}
                 onScroll={Animated.event(
                     [{nativeEvent: {contentOffset : { x: scrollX}}}],
                     {useNativeDriver: true}
