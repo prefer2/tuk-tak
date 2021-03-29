@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Home from './component/Home'
 import MyCalendar from './component/MyCalendar'
-
+import CameraGallery from './component/CameraGallery'
 
 function HomeScreen() {
   return (
@@ -15,8 +15,8 @@ function HomeScreen() {
 
 function SettingsScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <CameraGallery />
     </View>
   );
 }
