@@ -23,7 +23,10 @@ function SettingsScreen() {
 
 function CalendarScreen() {
   return (
-    <MyCalendar />
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <MyCalendar />  
+    </View>
+    
   );
 }
 
