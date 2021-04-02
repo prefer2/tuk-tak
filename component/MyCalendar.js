@@ -54,7 +54,7 @@ const MyCalendar = () => {
     }, []);
 
     const addMonth=()=>{
-      let year=new Date().getFullYear();
+      let year=currentYear;
       let month =currentMonth;
 
      if(month==12){
@@ -95,7 +95,7 @@ const MyCalendar = () => {
     };
 
     const subMonth=()=>{
-      let year=new Date().getFullYear();
+      let year=currentYear;
       let month =currentMonth;
 
       if(currentMonth==1){
@@ -135,7 +135,7 @@ const MyCalendar = () => {
           }
           setThisWeek(rows);
     };
-
+    
     const renderItem = ({ item }) => (
       <Text style={{width:50, height:30, alignContent:'center', alignItems:'center'}}>{item}</Text>
     );
@@ -143,11 +143,15 @@ const MyCalendar = () => {
   return (
     <SafeAreaView style={{flex: 1}}>
         <View style={styles.container}>
+        <View style={{flexDirection:'row', justifyContent:'space-between', padding:10}}>
         <TouchableOpacity onPress={() => {
             alert(new Date);
           }}
           
         ><Text>Today</Text></TouchableOpacity>
+       <Text style={styles.title}>Title of the Calendar</Text>
+       <Text>X</Text>
+        </View>
         <View style={{flexDirection:'row', alignItems: 'center', justifyContent: 'center', marginBottom: 10}}>
         <TouchableOpacity onPress={() => {
             subMonth()
@@ -181,8 +185,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'white',
-    top: 50
+    top: 20
     
+  },
+  title:{
+    fontSize:16
   },
   textStyle: {
     textAlign: 'center',
